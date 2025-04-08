@@ -116,18 +116,15 @@
           Seguir Comprando
         </a>
       </div>
+
       <!-- Contenedor para el total seleccionado -->
       <div class="total-selected-wrapper mt-4">
-        Total Seleccionado: <span id="selected-total">$ 0</span>
+        <button id="btn-comprar" class="btn btn-success">Completar Compra</button>
+        <span id="selected-total">$ 0</span>
       </div>
 
-      <div class="text-center mt-4">
-        <!-- Este botón realizará una petición POST a la ruta de facturación -->
-        <button id="btn-comprar" class="btn btn-success">Completar Compra y Generar Factura</button>
-      </div>
-      
     {% else %}
-      <p class="text-center empty-cart-message">Tu carrito está vacío 😢</p>
+      <p class="text-center emp ty-cart-message">Tu carrito está vacío 😢</p>
       <div class="text-center mt-4">
         <a href="{{ url_for('productos.index') }}" class="seguir-comprando-btn">
           Explorar Productos
